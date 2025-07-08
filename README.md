@@ -37,3 +37,38 @@ A real-time, AI-powered system for detecting plant diseases and pests in crops l
 ```bash
 git clone https://github.com/your-username/Automated-plant-disease-and-pest-detection-system.git
 cd Automated-plant-disease-and-pest-detection-system
+
+### 2. Set Up Python Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+### 3. Set Up Flutter App
+
+```bash
+cd mobile_app/flutter_app
+flutter pub get
+### 4. Set Up Django Backend
+
+```bash
+cd ../django_backend
+python manage.py migrate
+# Optional: python manage.py createsuperuser
+
+### 📁 Dataset
+- 26,394+ leaf images from public and local sources.
+- Focused expansion on cactus diseases and pests.
+- Augmentation: rotation, flipping, zooming.
+- Preprocessing: resizing, normalization.
+
+📲 Run App & Backend
+```bash
+
+# Django backend
+cd mobile_app/django_backend
+python manage.py runserver
+# Flutter app
+cd ../flutter_app
+flutter run
