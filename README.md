@@ -1,0 +1,2 @@
+# Automated_plant_disease_and_pest_detection_system
+Automante Plant disease and plant detection system
