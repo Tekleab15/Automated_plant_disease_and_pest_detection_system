@@ -1,6 +1,6 @@
 # 🌿 Automated Plant Disease and Pest Detection System
 
-A real-time, AI-powered system for detecting plant diseases and pests in crops like cactus, apple, potato, and corn. Built with Convolutional Neural Networks (CNNs) and integrated into a Flutter mobile app with a Django backend, the system provides localized recommendations—including Tigrigna support—to empower farmers and improve food security.
+A real-time, AI-powered system for detecting plant diseases and pests in crops like cactus, apple, potato, and corn. Built with Convolutional Neural Networks (CNNs) and integrated into a Flutter mobile app with a Django backend, the system provides localized recommendations—including Tigrigna support—to empower farmers and improve food security.and finding best algorithms as well.
 
 ---
 
