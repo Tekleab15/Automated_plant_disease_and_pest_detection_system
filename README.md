@@ -47,12 +47,11 @@ flutter pub get
 bash
 cd ../django_backend
 python manage.py migrate
-# Optional: python manage.py createsuperuser
-📁 Dataset
+
+Optional: python manage.py createsuperuser
+# 📁 Dataset
 26,394+ leaf images from public and local sources.
-
 Focused expansion on cactus diseases and pests.
-
 Augmentation: rotation, flipping, zooming.
 
 Preprocessing: resizing, normalization.
