@@ -65,3 +65,17 @@ Launch Flutter App
 bash
 cd ../flutter_app
 flutter run
+
+:
+
+📬 Contact
+For questions, collaboration, or feedback, feel free to reach out to the team:
+
+## 📬 Contact
+
+For inquiries, collaboration, or feedback, feel free to reach out to any of the contributors:
+- **Tekleab Gebremedhin Gebretsadik** – [tekleab.gebremedhin@singularitynet.io](mailto:tekleab.gebremedhin@singularitynet.io)  
+- **Bruh Tesheme Wubneh** – [bruhtesheme@gmail.com](mailto:bruhtesheme@gmail.com)  
+- **Hailom Asegede Senbete** – [hailomasegede@gmail.com](mailto:hailomasegede@gmail.com)  
+- **Kalayu Redae Gebreab** – [kalayuredea2@gmail.com](mailto:kalayuredea2@gmail.com)  
+- **Tadesse Geberemicheal Berhe** – [tadiosgb26@gmail.com](mailto:tadiosgb26@gmail.com)
