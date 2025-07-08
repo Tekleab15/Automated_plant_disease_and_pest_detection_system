@@ -32,7 +32,7 @@ A real-time, AI-powered system for detecting plant diseases and pests in crops l
 ⚙️ Installation & Setup
 1. Clone the Repository
 bash
-git clone https://github.com/your-username/Automated-plant-disease-and-pest-detection-system.git
+git clone https://github.com/Tekleab15/Automated-plant-disease-and-pest-detection-system.git
 cd Automated-plant-disease-and-pest-detection-system
 2. Set Up Python Environment
 bash
