@@ -1,81 +1,57 @@
 # 🌿 Automated Plant Disease and Pest Detection System
+> **Bridging the Digital Divide with Offline-First AI for Indigenous Highland Crops**
 
-A real-time, AI-powered system for detecting plant diseases and pests in crops like cactus, apple, potato, and corn. Built with Convolutional Neural Networks (CNNs) and integrated into a Flutter mobile app with a Django backend, the system provides localized recommendations, including Tigrigna support—to empower farmers and improve food security.and finding best algorithms as well.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Paper Status](https://img.shields.io/badge/Paper-Submitted-blue)](https://arxiv.org/)
+[![Framework](https://img.shields.io/badge/Framework-PyTorch%20%7C%20TensorFlow-orange)](https://pytorch.org/)
+[![Flutter](https://img.shields.io/badge/Mobile-Flutter-02569B)](https://flutter.dev/)
 
----
-
-## 🚀 Key Features
-
-- 🔍 **Multi-Crop Detection**: Supports cactus, apple, potato, and corn.
-- 🧠 **Deep Learning Models**: Custom CNNs with plans for Vision Transformers
-- 📱 **Mobile App**: Flutter-based app for real-time image-based diagnosis.
-- 🌐 **Django Backend**: Manages data and serves model predictions.
-- 🌍 **Localized Recommendations**: Includes Tigrigna and related local language support.
-- 🧾 **Model Hosting**: Deployed on Hugging Face for easy access and integration.
-- 🧪 **Expanding Dataset**: 26K+ images, with a focus on cactus disease and pest detection.
+A robust, offline-first deep learning system designed to diagnose plant diseases in resource-constrained environments (Tigray, Ethiopia). This project introduces the **first machine-learning-ready dataset for Cactus-fig (*Opuntia ficus-indica*)** and benchmarks hybrid architectures to balance accuracy and efficiency on low-end hardware.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Key Innovations
 
-| Category     | Tools/Frameworks                          |
-|--------------|-------------------------------------------|
-| Languages    | Python, Dart                              |
-| ML Framework | TensorFlow/Keras                          |
-| Mobile       | Flutter                                   |
-| Backend      | Django Rest Framework (DRF)               |
-| Compute      | Kaggle Kernels (GPU)                      |
-| Hosting      | Hugging Face                              |
-| Tools        | Git, GitHub                               |
+### 1. **Indigenous Dataset Curation**
+We curated a novel dataset of **3,587 field-verified images** of *Opuntia ficus-indica*, capturing complex pathologies like **Cochineal Infestation** and **Fungal Rot** in real-world conditions (dust, shadows, occlusion).
+
+### 2. **Dual-Architecture Strategy (The Trade-off)**
+We benchmarked two distinct architectures to solve the "Accuracy vs. Efficiency" dilemma:
+* **🏎️ Efficiency Champion:** A **Custom Lightweight CNN** (3.1 MB, 42ms latency) for real-time video scanning on legacy Android devices.
+* **🎯 Accuracy Champion:** A fine-tuned **MobileViT-XS** (9.3 MB, 68ms latency) that achieves **97.3% accuracy**, using Self-Attention to resolve complex visual ambiguities.
+
+### 3. **Human-Centric Deployment**
+* **Offline-First:** Fully quantized TensorFlow Lite (Float16) models run without internet.
+* **Inclusive UI:** A Flutter-based mobile application localized in **Tigrigna** to empower rural farmers.
 
 ---
-⚙️ Installation & Setup
-1. Clone the Repository
-bash
-git clone https://github.com/Tekleab15/Automated-plant-disease-and-pest-detection-system.git
-cd Automated-plant-disease-and-pest-detection-system
-2. Set Up Python Environment
-bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-3. Set Up Flutter App
-bash
-cd mobile_app/flutter_app
-flutter pub get
-4. Set Up Django Backend
-bash
-cd ../django_backend
-python manage.py migrate
 
-Optional: python manage.py createsuperuser
-# 📁 Dataset
-26,394+ leaf images from public and local sources.
-Focused expansion on cactus diseases and pests.
-Augmentation: rotation, flipping, zooming.
+## 📊 Performance Benchmarks
 
-Preprocessing: resizing, normalization.
+| Model Architecture | Accuracy | F1-Score | Model Size | Inference (ARM A53) |
+| :--- | :---: | :---: | :---: | :---: |
+| **MobileViT-XS (Hybrid)** | **97.3%** | **0.98** | 9.3 MB | 68 ms |
+| EfficientNet-Lite1 | 90.7% | 0.90 | 19.0 MB | 55 ms |
+| **Proposed Custom CNN** | 89.5% | 0.89 | **3.1 MB** | **42 ms** |
 
-📲 Run App & Backend
-Start Django Backend
-bash
-cd mobile_app/django_backend
-python manage.py runserver
-Launch Flutter App
-bash
-cd ../flutter_app
-flutter run
+> *Note: Benchmarks performed on a held-out test set of 1,195 indigenous cactus images.*
 
-:
+---
 
-📬 Contact
-For questions, collaboration, or feedback, feel free to reach out to the team:
+## 🛠️ System Architecture
 
-## 📬 Contact
+![System Overview](https://via.placeholder.com/800x400?text=Insert+Your+System+Diagram+Here)
 
-For inquiries, collaboration, or feedback, feel free to reach out to any of the contributors:
-- **Tekleab Gebremedhin Gebretsadik** – [tekleab.gebremedhin@singularitynet.io](mailto:tekleab.gebremedhin@singularitynet.io)  
-- **Bruh Tesheme Wubneh** – [bruhtesheme@gmail.com](mailto:bruhtesheme@gmail.com)  
-- **Hailom Asegede Senbete** – [hailomasegede@gmail.com](mailto:hailomasegede@gmail.com)  
-- **Kalayu Redae Gebreab** – [kalayuredea2@gmail.com](mailto:kalayuredea2@gmail.com)  
-- **Tadesse Geberemicheal Berhe** – [tadiosgb26@gmail.com](mailto:tadiosgb26@gmail.com)
+The system consists of three core modules:
+1.  **Training Pipeline (PyTorch/Keras):** Implements Stratified K-Fold Cross-Validation, AdamW optimization, and LIME explainability.
+2.  **Backend (Django REST Framework):** Handles model versioning, user authentication, and (optional) cloud sync for epidemiological data collection.
+3.  **Mobile Client (Flutter):** Runs the TFLite interpreter locally, mapping predictions to agronomic advice stored in a local SQLite database.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/Tekleab15/Automated_plant_disease_and_pest_detection_system.git](https://github.com/Tekleab15/Automated_plant_disease_and_pest_detection_system.git)
+cd Automated_plant_disease_and_pest_detection_system
