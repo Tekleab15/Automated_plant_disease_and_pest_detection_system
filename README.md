@@ -1,12 +1,18 @@
-# 🌿 Automated Plant Disease and Pest Detection System
+# 🌵 Automated Plant Disease & Pest Detection System
 > **Bridging the Digital Divide with Offline-First AI for Indigenous Highland Crops**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Paper Status](https://img.shields.io/badge/Paper-Submitted-blue)](https://arxiv.org/)
 [![Framework](https://img.shields.io/badge/Framework-PyTorch%20%7C%20TensorFlow-orange)](https://pytorch.org/)
 [![Flutter](https://img.shields.io/badge/Mobile-Flutter-02569B)](https://flutter.dev/)
+[![Platform](https://img.shields.io/badge/Platform-Android-green)](https://www.android.com/)
 
-A robust, offline-first deep learning system designed to diagnose plant diseases in resource-constrained environments (Tigray, Ethiopia). This project introduces the **first machine-learning-ready dataset for Cactus-fig (*Opuntia ficus-indica*)** and benchmarks hybrid architectures to balance accuracy and efficiency on low-end hardware.
+---
+
+## 📖 Overview
+Agriculture supports major portion of the population in developing communities like Tigray, Ethiopia. This project introduces an **offline-first**, AI-powered diagnostic tool specifically designed for the indigenous **Cactus-fig (*Opuntia ficus-indica*)** crop.
+
+By benchmarking hybrid architectures (**MobileViT-XS** vs. **Lightweight CNN**), we provide a solution that balances **clinical-grade accuracy (97.3%)** with **real-time performance (42ms)** on low-end Android devices.
 
 ---
 
@@ -17,7 +23,7 @@ We curated a novel dataset of **3,587 field-verified images** of *Opuntia ficus-
 
 ### 2. **Dual-Architecture Strategy (The Trade-off)**
 We benchmarked two distinct architectures to solve the "Accuracy vs. Efficiency" dilemma:
-* **🏎️ Efficiency Champion:** A **Custom Lightweight CNN** (4.8 MB, 42ms latency) for real-time video scanning on legacy Android devices.
+* **🏎️ Efficiency Champion:** A **Custom Lightweight CNN** (3.1 MB, 42ms latency) for real-time video scanning on legacy Android devices.
 * **🎯 Accuracy Champion:** A fine-tuned **MobileViT-XS** (9.3 MB, 68ms latency) that achieves **97.3% accuracy**, using Self-Attention to resolve complex visual ambiguities.
 
 ### 3. **Human-Centric Deployment**
@@ -32,20 +38,30 @@ We benchmarked two distinct architectures to solve the "Accuracy vs. Efficiency"
 | :--- | :---: | :---: | :---: | :---: |
 | **MobileViT-XS (Hybrid)** | **97.3%** | **0.98** | 9.3 MB | 68 ms |
 | EfficientNet-Lite1 | 90.7% | 0.90 | 19.0 MB | 55 ms |
-| **Proposed Custom CNN** | 89.5% | 0.89 | **4.8 MB** | **42 ms** |
+| **Proposed Custom CNN** | 89.5% | 0.89 | **3.1 MB** | **42 ms** |
 
 > *Note: Benchmarks performed on a held-out test set of 1,195 indigenous cactus images.*
 
 ---
 
-## 🛠️ System Architecture
+## 📂 Dataset Access
+The **Indigenous Cactus-Fig Dataset** is open-sourced to accelerate research in xerophytic crop pathology.
 
-![System Overview](https://via.placeholder.com/800x400?text=Insert+Your+System+Diagram+Here)
+| **Class** | **Description** |
+| :--- | :--- |
+| 🐛 **Affected** | Cochineal infestation, fungal rot, lesions |
+| 🌿 **Healthy** | Asymptomatic cladodes |
+| 🚫 **No Cactus** | Background noise rejection |
 
-The system consists of three core modules:
-1.  **Training Pipeline (PyTorch/Keras):** Implements Stratified K-Fold Cross-Validation, AdamW optimization, and LIME explainability.
-2.  **Backend (Django REST Framework):** Handles model versioning, user authentication, and (optional) cloud sync for epidemiological data collection.
-3.  **Mobile Client (Flutter):** Runs the TFLite interpreter locally, mapping predictions to agronomic advice stored in a local SQLite database.
+👉 **[Download Dataset from Kaggle](https://www.kaggle.com/datasets/tekleabg/cactus-final)**
+
+---
+
+## 🛠️ Tech Stack
+* **AI/ML:** PyTorch, TensorFlow, Keras, TFLite
+* **Mobile:** Flutter (Dart)
+* **Backend:** Django REST Framework (Python)
+* **Tools:** Git, Kaggle Kernels
 
 ---
 
@@ -55,3 +71,28 @@ The system consists of three core modules:
 ```bash
 git clone [https://github.com/Tekleab15/Automated_plant_disease_and_pest_detection_system.git](https://github.com/Tekleab15/Automated_plant_disease_and_pest_detection_system.git)
 cd Automated_plant_disease_and_pest_detection_system
+
+2. Set Up Python Environment (Training)
+python -m venv venv
+# Activate the environment
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+3. Run the Mobile App (Flutter)
+cd mobile_app/flutter_app
+flutter pub get
+flutter run
+
+3. Run the Mobile App (Flutter)
+cd mobile_app/flutter_app
+flutter pub get
+flutter run
+
+
+4. Run the Backend (Django Rest Framework)
+cd back_end
+python manage.py migrate
+python manage.py runserver
