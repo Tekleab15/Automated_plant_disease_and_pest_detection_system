@@ -1,0 +1,153 @@
+{
+    "plants": [
+        {
+            "plantName": "Corn",
+            "diseases": [
+              {
+                "diseaseName": "Powdery Mildew",
+                "symptoms": [
+                  "White powder on leaves",
+                  "Stunted growth"
+                ],
+                "causes": [
+                  "Fungal infection",
+                  "Overcrowding of plants"
+                ],
+                "detectionMechanism": "Image-based analysis of white fungal growth",
+                "recommendedTreatment": [
+                  "Use sulfur-based fungicides",
+                  "Remove severely infected plants"
+                ],
+                "preventiveMeasures": [
+                  "Increase spacing between plants",
+                  "Use resistant wheat varieties"
+                ]
+              }
+            ]
+          },
+      {
+        "plantName": "Tomato",
+        "diseases": [
+          {
+            "diseaseName": "Late Blight",
+            "symptoms": [
+              "Dark spots on leaves",
+              "Wilting",
+              "Decay of fruit"
+            ],
+            "causes": [
+              "Fungal infection",
+              "High humidity"
+            ],
+            "detectionMechanism": "Image recognition of leaf spots",
+            "recommendedTreatment": [
+              "Apply fungicides",
+              "Remove infected plants"
+            ],
+            "preventiveMeasures": [
+              "Ensure good air circulation",
+              "Avoid overhead watering"
+            ]
+          },
+          {
+            "diseaseName": "Early Blight",
+            "symptoms": [
+              "Brown spots on lower leaves",
+              "Yellowing of leaves",
+              "Dry spots on fruit"
+            ],
+            "causes": [
+              "Fungal infection",
+              "Warm, wet conditions"
+            ],
+            "detectionMechanism": "Spot detection using machine learning models",
+            "recommendedTreatment": [
+              "Use copper fungicides",
+              "Avoid wetting leaves during watering"
+            ],
+            "preventiveMeasures": [
+              "Rotate crops",
+              "Mulch to avoid soil contact"
+            ]
+          }
+        ]
+      },
+      {
+        "plantName": "Apple",
+        "diseases": [
+          {
+            "diseaseName": "Powdery Mildew",
+            "symptoms": [
+              "White powder on leaves",
+              "Stunted growth"
+            ],
+            "causes": [
+              "Fungal infection",
+              "Overcrowding of plants"
+            ],
+            "detectionMechanism": "Image-based analysis of white fungal growth",
+            "recommendedTreatment": [
+              "Use sulfur-based fungicides",
+              "Remove severely infected plants"
+            ],
+            "preventiveMeasures": [
+              "Increase spacing between plants",
+              "Use resistant wheat varieties"
+            ]
+          }
+        ]
+      },
+      {
+        "plantName": "Potato",
+        "diseases": [
+          {
+            "diseaseName": "Powdery Mildew",
+            "symptoms": [
+              "White powder on leaves",
+              "Stunted growth"
+            ],
+            "causes": [
+              "Fungal infection",
+              "Overcrowding of plants"
+            ],
+            "detectionMechanism": "Image-based analysis of white fungal growth",
+            "recommendedTreatment": [
+              "Use sulfur-based fungicides",
+              "Remove severely infected plants"
+            ],
+            "preventiveMeasures": [
+              "Increase spacing between plants",
+              "Use resistant wheat varieties"
+            ]
+          }
+        ]
+      },
+      {
+        "plantName": "Cactus Fig",
+        "diseases": [
+          {
+            "diseaseName": "Powdery Mildew",
+            "symptoms": [
+              "White powder on leaves",
+              "Stunted growth"
+            ],
+            "causes": [
+              "Fungal infection",
+              "Overcrowding of plants"
+            ],
+            "detectionMechanism": "Image-based analysis of white fungal growth",
+            "recommendedTreatment": [
+              "Use sulfur-based fungicides",
+              "Remove severely infected plants"
+            ],
+            "preventiveMeasures": [
+              "Increase spacing between plants",
+              "Use resistant wheat varieties"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
+
