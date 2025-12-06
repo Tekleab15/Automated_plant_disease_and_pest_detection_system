@@ -23,7 +23,7 @@ We curated a novel dataset of **3,587 field-verified images** of *Opuntia ficus-
 
 ### 2. **Dual-Architecture Strategy (The Trade-off)**
 We benchmarked two distinct architectures to solve the "Accuracy vs. Efficiency" dilemma:
-* **🏎️ Efficiency Champion:** A **Custom Lightweight CNN** (3.1 MB, 42ms latency) for real-time video scanning on legacy Android devices.
+* **🏎️ Efficiency Champion:** A **Custom Lightweight CNN** (4.8 MB, 42ms latency) for real-time video scanning on legacy Android devices.
 * **🎯 Accuracy Champion:** A fine-tuned **MobileViT-XS** (9.3 MB, 68ms latency) that achieves **97.3% accuracy**, using Self-Attention to resolve complex visual ambiguities.
 
 ### 3. **Human-Centric Deployment**
@@ -38,7 +38,7 @@ We benchmarked two distinct architectures to solve the "Accuracy vs. Efficiency"
 | :--- | :---: | :---: | :---: | :---: |
 | **MobileViT-XS (Hybrid)** | **97.3%** | **0.98** | 9.3 MB | 68 ms |
 | EfficientNet-Lite1 | 90.7% | 0.90 | 19.0 MB | 55 ms |
-| **Proposed Custom CNN** | 89.5% | 0.89 | **3.1 MB** | **42 ms** |
+| **Proposed Custom CNN** | 89.5% | 0.89 | **4.8 MB** | **42 ms** |
 
 > *Note: Benchmarks performed on a held-out test set of 1,195 indigenous cactus images.*
 
