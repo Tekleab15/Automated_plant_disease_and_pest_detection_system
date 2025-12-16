@@ -8,6 +8,8 @@
 [![Platform](https://img.shields.io/badge/Platform-Android-green)](https://www.android.com/)
 
 ---
+📄 Paper: arXiv:2512.11871
+https://arxiv.org/abs/2512.11871
 
 ## 📖 Overview
 Agriculture supports major portion of the population in developing communities like Tigray, Ethiopia. This project introduces an **offline-first**, AI-powered diagnostic tool specifically designed for the indigenous **Cactus-fig (*Opuntia ficus-indica*)** crop.
